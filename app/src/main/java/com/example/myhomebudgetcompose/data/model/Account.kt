@@ -1,4 +1,4 @@
-package com.example.myhomebudgetkotlin.data.model
+package com.example.myhomebudgetcompose.data.model
 
 data class Account(
     val name: String,

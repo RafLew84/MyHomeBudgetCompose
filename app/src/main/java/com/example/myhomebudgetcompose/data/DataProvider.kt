@@ -1,8 +1,8 @@
 package com.example.myhomebudgetcompose.data
 
 import android.graphics.Color
-import com.example.myhomebudgetkotlin.data.model.Account
-import com.example.myhomebudgetkotlin.data.model.Bill
+import com.example.myhomebudgetcompose.data.model.Account
+import com.example.myhomebudgetcompose.data.model.Bill
 import java.time.LocalDate
 
 object DataProvider {
