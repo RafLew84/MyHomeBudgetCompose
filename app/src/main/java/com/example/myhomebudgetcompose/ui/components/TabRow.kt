@@ -108,14 +108,15 @@ private fun SingleTab(
                     color = Color.Unspecified
                 )
             )
-            .clearAndSetSemantics { contentDescription = text }
-    ) {
-        Icon(imageVector = icon, contentDescription = text, tint = tabTintColor)
-        if (selected) {
-            Spacer(Modifier.width(12.dp))
-            Text(text.uppercase(Locale.getDefault()), color = tabTintColor)
+            .clearAndSetSemantics { contentDescription = text },
+        content =  {
+            Icon(imageVector = icon, contentDescription = text, tint = tabTintColor)
+            if (selected) {
+                Spacer(Modifier.width(12.dp))
+                Text(text.uppercase(Locale.getDefault()), color = tabTintColor)
+            }
         }
-    }
+    )
 }
 
 private val TabHeight = 56.dp
