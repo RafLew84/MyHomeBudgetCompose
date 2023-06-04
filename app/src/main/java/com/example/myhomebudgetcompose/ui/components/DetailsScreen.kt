@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.myhomebudgetcompose.util.extractProportions
 import com.example.myhomebudgetcompose.util.formatter
+import kotlin.math.absoluteValue
 
 /**
  * Generic component used by the accounts and bills screens to show a chart and a list of items.
@@ -52,6 +53,7 @@ fun <T> StatementBody(
         Box(Modifier.padding(16.dp)) {
             val accountsProportion = items.extractProportions { amounts(it) }
             val circleColors = items.map { colors(it) }
+            val sign = if (amountsTotal < 0) "– " else " "
             AnimatedCircle(
                 accountsProportion,
                 circleColors,
@@ -67,7 +69,7 @@ fun <T> StatementBody(
                     fontSize = 20.sp
                 )
                 Text(
-                    text = ("- ${formatter.format(amountsTotal)} zł"),
+                    text = ("$sign${formatter.format(amountsTotal.absoluteValue)} zł"),
                     modifier = Modifier.align(Alignment.CenterHorizontally),
                     fontSize = 36.sp
                 )

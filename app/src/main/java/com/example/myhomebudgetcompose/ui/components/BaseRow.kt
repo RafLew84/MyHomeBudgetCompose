@@ -38,8 +38,8 @@ fun BaseRow(
         Spacer(modifier.size(4.dp, 36.dp).background(color = color))
         Spacer(Modifier.width(12.dp))
         Column(Modifier) {
-            Text(text = title)
-            Text(text = subtitle)
+            Text(text = title, fontSize = 20.sp)
+            Text(text = subtitle, fontSize = 12.sp)
         }
         Spacer(Modifier.weight(1f))
         Text(

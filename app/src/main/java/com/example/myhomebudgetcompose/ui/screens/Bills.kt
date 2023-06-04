@@ -23,7 +23,7 @@ fun BillsScreen(
         items = bills,
         amounts = { bill -> bill.amount.toFloat() },
         colors = { bill -> bill.color },
-        amountsTotal = bills.map { bill -> bill.amount.toFloat() }.sum(),
+        amountsTotal = -bills.map { bill -> bill.amount.toFloat() }.sum(),
         circleLabel = "Total",
         rows = { bill ->
             BaseRow(
