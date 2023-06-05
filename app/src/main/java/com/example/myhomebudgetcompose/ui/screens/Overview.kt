@@ -88,27 +88,27 @@ private fun CustomAlertDialog(
     onDismiss: () -> Unit,
     buttonText: String
 ) {
-        AlertDialog(
-            onDismissRequest = onDismiss,
-            text = { Text("No Alerts !!!") },
-            confirmButton = {
-                Column {
-                    Divider(
-                        Modifier.padding(horizontal = 12.dp),
-                        color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f)
-                    )
-                    TextButton(
-                        onClick = onDismiss,
-                        shape = RectangleShape,
-                        contentPadding = PaddingValues(16.dp),
-                        modifier = Modifier.fillMaxWidth()
-                    ) {
-                        Text(buttonText)
-                    }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        text = { Text("No Alerts !!!") },
+        confirmButton = {
+            Column {
+                Divider(
+                    Modifier.padding(horizontal = 12.dp),
+                    color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f)
+                )
+                TextButton(
+                    onClick = onDismiss,
+                    shape = RectangleShape,
+                    contentPadding = PaddingValues(16.dp),
+                    modifier = Modifier.fillMaxWidth()
+                ) {
+                    Text(buttonText)
                 }
             }
-        )
-    }
+        }
+    )
+}
 
 @Composable
 private fun Alert(onClickSeeAll: () -> Unit) {
