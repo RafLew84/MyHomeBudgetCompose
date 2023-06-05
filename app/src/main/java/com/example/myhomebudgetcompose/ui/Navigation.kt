@@ -56,7 +56,11 @@ fun NavGraph(navController: NavHostController, modifier: Modifier){
         startDestination = Screens.Overview.route,
         modifier = modifier
     ) {
-        composable(route = Screens.Overview.route){ OverviewScreen() }
+        composable(route = Screens.Overview.route){
+            OverviewScreen(
+                onClickSeeAllAccounts = { navController.navigateSingleTopTo(Screens.Accounts.route) },
+                onClickSeeAllBills = {navController.navigateSingleTopTo(Screens.Bills.route)}
+            ) }
         composable(route = Screens.Accounts.route){ AccountsScreen() }
         composable(route = Screens.Bills.route){ BillsScreen() }
     }
