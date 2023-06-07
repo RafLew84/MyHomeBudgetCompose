@@ -15,9 +15,8 @@ import com.example.myhomebudgetcompose.ui.theme.MyHomeBudgetComposeTheme
 import com.example.myhomebudgetcompose.util.dateFormatter
 
 @Composable
-fun BillsScreen(
-    bills: List<Bill> = remember { DataProvider.bills }
-) {
+fun BillsScreen() {
+    val bills: List<Bill> = remember { DataProvider.bills }
     StatementBody(
         modifier = Modifier.clearAndSetSemantics { contentDescription = "Bills" },
         items = bills,
