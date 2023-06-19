@@ -69,7 +69,7 @@ fun <T> StatementBody(
                     fontSize = 20.sp
                 )
                 Text(
-                    text = ("$sign${formatter.format(amountsTotal.absoluteValue)} zł"),
+                    text = ("$sign${formatter.format(amountsTotal.absoluteValue )} zł"),
                     modifier = Modifier.align(Alignment.CenterHorizontally),
                     fontSize = 36.sp
                 )
